@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>urlAndTitle</title>
+<meta charset="utf8">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>  
+<script type="text/javascript" src="getUT.js"></script>
+
+</head>
+
+<body>
+<form id="urlAndTitle" action="http://127.0.0.1:8080/record/addRecord" method="post">
+<input type="hidden" name="username" value="ming"/><br/>
+url:<input id="url" type="text" name="url"/><br/>
+title:<input id="title" type="text" name="title"/><br/>
+标签:<select id="tag" name="tag">
+        <option value="JAVASE">JAVASE</option>
+        <option value="J2EE">J2EE</option>
+        <option value="DB">数据库</option>
+        <option value="OS">操作系统</option>
+        <option value="INTERNET">网络</option>
+        <option value="AG">算法</option>
+        </select><br/>
+笔记:<textarea id="note" name="note" rows="3"></textarea>  
+<input type="submit" value="提交"/>
+</form>
+
+
+
+</body>
+</html>
+

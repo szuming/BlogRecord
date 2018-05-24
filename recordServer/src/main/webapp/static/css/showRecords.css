@@ -1,0 +1,10 @@
+.record-table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.record-table td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

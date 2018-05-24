@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.szu.ming.dao.RecordMapper">
+    <resultMap id="RecordResultMap" type="cn.szu.ming.entity.Record">
+        <id property="id" column="id" />
+        <result property="title" column="title"/>
+        <result property="time" column="time"/>
+        <result property="note" column="note"/>
+    </resultMap>
+    <sql id="Base_Colum_List">id,title,url,time,note</sql>
+    <select id="selectById" parameterType="int" resultMap="RecordResultMap">
+    select
+    <include refid="Base_Colum_List"/>
+    from record where id = #{id}
+    </select>
+
+    <select id="getRecords"  resultMap="RecordResultMap">
+        select
+        <include refid="Base_Colum_List"/>
+        from record
+    </select>
+
+    <insert id="insertRecord" parameterType="cn.szu.ming.entity.Record">
+        insert into Record (title,url,note)
+        values (#{title},#{url},#{note})
+    </insert>
+</mapper>
