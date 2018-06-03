@@ -1,8 +1,14 @@
 package cn.szu.ming.entity;
 
+
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class Record {
+public class Record implements Serializable {
+    private static final long serialVersionUID = -7898194272883238670L;     //序列化id
     private int id;
     private String title;
     private String url;
@@ -60,5 +66,16 @@ public class Record {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", url='" + url + '\'' +
+                ", time=" + time +
+                ", note='" + note + '\'' +
+                '}';
     }
 }

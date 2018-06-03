@@ -43,7 +43,15 @@ dependencies {
 
     //redis
     compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
-    compile group: 'org.springframework.data', name: 'spring-data-redis', version: '2.0.7.RELEASE'
+    //protostuff序列化工具
+    compile group: 'io.protostuff', name: 'protostuff-core', version: '1.6.0'
+    compile group: 'io.protostuff', name: 'protostuff-runtime', version: '1.6.0'
+    //json序列化
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+
+
+
+
 
 
 

@@ -16,10 +16,17 @@
     from record where id = #{id}
     </select>
 
+    <select id="selectLast"  resultMap="RecordResultMap">
+        select
+        <include refid="Base_Colum_List"/>
+        from record order by id desc  limit 1
+    </select>
+
     <select id="getRecords"  resultMap="RecordResultMap">
         select
         <include refid="Base_Colum_List"/>
         from record
+        order by id DESC
     </select>
 
     <insert id="insertRecord" parameterType="cn.szu.ming.entity.Record">

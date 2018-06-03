@@ -25,6 +25,11 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
+    public Record selectLast() {
+        return recordMapper.selectLast();
+    }
+
+    @Override
     public List<Record> getRecords(int pageNum,int pageSize) {
         List<Record> list;
         PageHelper.startPage(pageNum,pageSize);

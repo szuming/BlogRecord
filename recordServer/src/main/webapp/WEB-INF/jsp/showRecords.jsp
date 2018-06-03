@@ -24,10 +24,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>2018/5/24</h1>
     <table class="table table-striped table-bordered record-table">
-        <tbody>
-        <h1 id="nowDate"></h1>
+        <tbody id="rtable">
         <c:forEach var="l" items="${list}">
             <tr>
                 <td title="${l.title}" style="width: 25%"><a href="${l.url}" target="_blank">${l.title}</a></td>
@@ -58,6 +56,6 @@
 </div>
 
 
-
+<script src="../../static/js/showRecords.js"></script>
 </body>
 </html>
